@@ -1,0 +1,13 @@
+.answer-wrapper {
+    padding: 0px 30px;
+}
+
+@media (max-width: 600px) {
+    .answer-wrapper{
+        padding: 0px;
+    }
+
+    .answer-wrapper p {
+        font-size: 20px; 
+     }
+}

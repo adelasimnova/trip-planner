@@ -1,0 +1,97 @@
+.trip-planner-header{
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   padding: 40px 0px;
+   background-color: rgba(255, 255, 255, 0.8);
+   border-radius: 20px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+   margin: 5px 50px;
+}
+
+.trip-planner-form-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 0px 50px;
+}
+
+.trip-planner-form-label {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.trip-planner-form-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #1b540f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.trip-planner-form {
+    display:grid;
+    width: 280px;
+}
+
+.trip-planner-form-dropdown {
+    padding: 5px 10px
+}
+
+:hover.trip-planner-form-dropdown {
+    cursor:pointer;
+}
+
+:hover.trip-planner-form-button {
+    cursor:pointer;
+    box-shadow: 0 0 20px rgba(27, 84, 15, 0.5);
+}
+
+.trip-planner-form-input {
+    cursor: text;
+    padding: 5px 10px
+}
+.kids-checkbox {
+    display: flex;
+    justify-content: center;
+}
+.kids-checkbox-only {
+    margin-left: 15px;
+}
+
+:hover.kids-checkbox-only {
+    cursor:pointer;
+}
+
+.loading-wrapper {
+    height: 60px;
+    padding-top: 20px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+@media (max-width: 600px) {
+    .trip-planner-header{
+        margin: 5px 5px;
+        font-size: 40px;
+    }
+    .trip-planner-form-wrapper {
+        margin: 5px 5px;
+        padding: 5px 15px;
+    }
+    .trip-planner-form {
+        width: 250px;
+    }
+}
