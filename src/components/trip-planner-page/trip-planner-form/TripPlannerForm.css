@@ -6,7 +6,7 @@
    background-color: rgba(255, 255, 255, 0.8);
    border-radius: 20px;
    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-   margin: 5px 50px;
+   margin: 20px 50px 5px 50px;
 }
 
 .trip-planner-form-wrapper{
@@ -25,6 +25,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    font-size: 25px;
 }
 
 .trip-planner-form-button {
@@ -59,7 +60,8 @@
 
 .trip-planner-form-input {
     cursor: text;
-    padding: 5px 10px
+    padding: 5px 10px;
+    resize: vertical; 
 }
 .kids-checkbox {
     display: flex;
@@ -80,6 +82,22 @@
 
 input:focus::placeholder {
     color: transparent;
+  }
+
+input {
+    font-family: "Kalam", Arial, Helvetica, sans-serif;    
+  }
+
+select, option {
+    font-family: "Kalam", Arial, Helvetica, sans-serif;    
+  }
+
+textarea {
+    font-family: "Kalam", Arial, Helvetica, sans-serif;    
+  }
+
+button {
+    font-family: "Kalam", Arial, Helvetica, sans-serif;    
   }
 
 @media (max-width: 600px) {
