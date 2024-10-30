@@ -7,11 +7,14 @@ This project is a web application that recommends an ideal vacation destination 
 
 ## Features
 **User Form:** Users complete a form with questions about their vacation preferences.
+
 **AI Recommendation:** Based on the form data, an AI generates a destination recommendation.
+
 **Destination Description:** The AI's response includes a description of the recommended destination.
 
 ## Technologies Used
 **Frontend:** React (JSX, components, and state management)
+
 **Backend:** Groq AI
 
 # Setup
