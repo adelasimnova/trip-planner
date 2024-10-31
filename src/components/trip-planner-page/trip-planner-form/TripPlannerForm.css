@@ -111,4 +111,8 @@ select, option, input, textarea {
     .trip-planner-form {
         width: 250px;
     }
+
+    .trip-planner-form-datepicker, .trip-planner-form-input {
+        width: 230px;
+    }
 }
