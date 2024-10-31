@@ -2,17 +2,19 @@ import * as React from "react";
 import "./TripPlannerForm.css";
 import { getTripPlannerAnswer } from "../../../services/ai.ts";
 import { TripPlannerAnswer } from "../trip-planner-answer/TripPlannerAnswer.tsx";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export function TripPlannerForm() {
-  const [travelGoal, setTravelGoal] = React.useState("");
-  const [temperature, setTemperature] = React.useState("");
-  const [travelTime, setTravelTime] = React.useState("");
-  const [yourLocation, setYourLocation] = React.useState("");
-  const [budget, setBudget] = React.useState("");
-  const [date, setDate] = React.useState("");
+  const [travelGoal, setTravelGoal] = React.useState<string>("");
+  const [temperature, setTemperature] = React.useState<string>("");
+  const [travelTime, setTravelTime] = React.useState<string>("");
+  const [yourLocation, setYourLocation] = React.useState<string>("");
+  const [budget, setBudget] = React.useState<string>("");
+  const [date, setDate] = React.useState<string>("");
   const [kidsChecked, setKidsChecked] = React.useState<boolean>(false);
-  const [notes, setNotes] = React.useState("");
-  const [answer, setAnswer] = React.useState("");
+  const [notes, setNotes] = React.useState<string>("");
+  const [answer, setAnswer] = React.useState<string>("");
   const [answerLoading, setAnswerLoading] = React.useState<boolean>(false);
 
   const formatFormData = () => {
@@ -57,7 +59,7 @@ export function TripPlannerForm() {
             className="trip-planner-form-dropdown"
             id="travelGoal"
             value={travelGoal}
-            onChange={(e) => setTravelGoal(e.target.value)}
+            onChange={(event) => setTravelGoal(event.target.value)}
           >
             <option value="">-- Choose an option --</option>
             <option value="adventure">Adventure</option>
@@ -130,19 +132,20 @@ export function TripPlannerForm() {
           <label className="trip-planner-form-label" htmlFor="date">
             Travel date:
           </label>
-          <input
-            className="trip-planner-form-dropdown"
-            type="date"
+
+          <DatePicker
             id="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-          ></input>
+            className="trip-planner-form-datepicker"
+            selected={date ? new Date(date) : new Date()}
+            onChange={(date) => setDate(date ? date.toISOString() : "")}
+            dateFormat="dd/MM/yyyy"
+          />
 
           <label className="trip-planner-form-label" htmlFor="kidsCheckbox">
             Do you travel with kids?
           </label>
           <div className="kids-checkbox">
-            <label>Yes</label>
+            <label htmlFor="kidsCheckbox">Yes</label>
             <input
               className="kids-checkbox-only"
               id="kidsCheckbox"

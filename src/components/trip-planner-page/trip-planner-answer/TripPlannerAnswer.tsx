@@ -1,5 +1,5 @@
 import "./TripPlannerAnswer.css";
-import LoadingScreen from "../../LoadingScreen/LoadingScreen.tsx";
+import LoadingIndicator from "../../LoadingScreen/LoadingIndicator.tsx";
 
 interface IProps {
   answer: string;
@@ -7,12 +7,10 @@ interface IProps {
 }
 
 export function TripPlannerAnswer(props: IProps) {
-  console.log(props.answer);
-
   return (
     <div className="answer-wrapper">
       <div className="loading-wrapper">
-        {props.answerLoading && <LoadingScreen />}
+        {props.answerLoading && <LoadingIndicator />}
       </div>
       <div dangerouslySetInnerHTML={{ __html: props.answer }}></div>
     </div>

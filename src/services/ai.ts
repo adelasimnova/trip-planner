@@ -1,4 +1,5 @@
 import Groq from "groq-sdk";
+import { ChatCompletionCreateParamsNonStreaming } from "groq-sdk/resources/chat/completions.mjs";
 
 const GROQ_API_KEY = "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";
 
@@ -8,7 +9,7 @@ const groq = new Groq({
 });
 
 export async function getTripPlannerAnswer(text: string): Promise<string> {
-  const chatCompletion = await groq.chat.completions.create({
+  const params: ChatCompletionCreateParamsNonStreaming = {
     messages: [
       {
         role: "user",
@@ -16,7 +17,9 @@ export async function getTripPlannerAnswer(text: string): Promise<string> {
       },
     ],
     model: "llama3-8b-8192",
-  });
+  };
+
+  const chatCompletion = await groq.chat.completions.create(params);
 
   return chatCompletion.choices[0]?.message?.content || "";
 }

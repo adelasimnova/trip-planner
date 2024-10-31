@@ -37,7 +37,7 @@
     border: none;
     padding: 10px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .trip-planner-form {
@@ -46,21 +46,27 @@
 }
 
 .trip-planner-form-dropdown {
-    padding: 5px 10px
+    padding: 5px 10px;
+}
+
+.trip-planner-form-datepicker {
+    padding: 5px 10px;
+    width: 280px;
 }
 
 :hover.trip-planner-form-dropdown {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 :hover.trip-planner-form-button {
-    cursor:pointer;
+    cursor: pointer;
     box-shadow: 0 0 20px rgba(27, 84, 15, 0.5);
 }
 
 .trip-planner-form-input {
     cursor: text;
     padding: 5px 10px;
+    width: 280px;
     resize: vertical; 
 }
 .kids-checkbox {
@@ -72,7 +78,7 @@
 }
 
 :hover.kids-checkbox-only {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .loading-wrapper {
@@ -84,19 +90,12 @@ input:focus::placeholder {
     color: transparent;
   }
 
-input {
-    font-family: "Kalam", Arial, Helvetica, sans-serif;    
+select, option, input, textarea {
+    font-family: "Kalam", Arial, Helvetica, sans-serif;   
+    font-size: 20px; 
   }
 
-select, option {
-    font-family: "Kalam", Arial, Helvetica, sans-serif;    
-  }
-
-textarea {
-    font-family: "Kalam", Arial, Helvetica, sans-serif;    
-  }
-
-button {
+  button {
     font-family: "Kalam", Arial, Helvetica, sans-serif;    
   }
 
