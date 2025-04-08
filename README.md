@@ -1,5 +1,5 @@
 # Trip Planner App
-[Demo](https://webbucket-cdn-trip-planner-production-78c70137.stacktape-app.com/)
+[Demo](https://trip-planner.simnova.sk/)
 
 # Project Description
 This project is a web application that recommends an ideal vacation destination based on a user's input via a form. Using AI from Groq, the application processes the user's preferences to suggest a personalized destination.
